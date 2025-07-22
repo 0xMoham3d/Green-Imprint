@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Imprint - Sustainable Living</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Green Imprint</div>
+            <p>Sustainable Solutions for a Greener Tomorrow</p>
+        </div>
+    </header>
+
+    <div id="login-page" class="centered-padding">
+        <div class="card max-width-500 auto-margin">
+            <h2>Welcome to Green Imprint</h2>
+            <form>
+                <div class="form-group">
+                    <label>Full Name:</label>
+                    <input type="text" placeholder="Enter name">
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="text" placeholder="Enter email">
+                </div>
+                <button type="button" onclick="document.getElementById('login-page').style.display='none';document.getElementById('main-content').style.display='block';document.getElementById('member-id-display').style.display='block'">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="member-id-display" class="member-id-display">
+        Your Member ID: <strong>987654321</strong><br>
+        <span>Member Points: </span><strong>0</strong>
+    </div>
+    <div id="main-content" style="display:none;">
+        <div class="container">
+            <div class="tab-buttons">
+            <a href="#section1" class="tab-button">Tree Planter Request</a>
+            <a href="#section2" class="tab-button">Recycle Rewards</a>
+            <a href="#section3" class="tab-button">Feedback & Support</a>
+        </div>
+
+        <section id="section1" class="tab-content">
+            <h2>Request a Tree Planter</h2>
+            
+            <div class="card">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Planting Location Address</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Tree Type Preference</label>
+                        <select name="tree-type">
+                            <option value="">Select a tree type</option>
+                            <option value="oak">Oak</option>
+                            <option value="maple">Maple</option>
+                            <option value="pine">Pine</option>
+                            <option value="fruit">Fruit Tree</option>
+                            <option value="other">Other (please specify)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Upload Photos of Your Space</label>
+                        <input type="file" id="photos" name="photos" accept="image/*" multiple>
+                        <p class="small-note">Please upload clear photos of the area where you'd like the tree planted</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">Additional Notes</label>
+                        <textarea id="notes" name="notes" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Preferred Planting Date</label>
+                        <select name="date-range">
+                            <option value="">Select a time frame</option>
+                            <option value="1-2">Within 1-2 weeks</option>
+                            <option value="2-4">Within 2-4 weeks</option>
+                            <option value="month+">Next month or later</option>
+                        </select>
+                    </div>
+                    
+                    <button type="button" onclick="this.parentNode.innerHTML='<h3 class=\'centered-heading\'>Thank you for your request!</h3><p class=\'centered-heading\'>We will contact you shortly</p>'">Submit Request</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="section2" class="tab-content">
+            <h2>Recycle & Earn Points</h2>
+            
+            <div class="card">
+                <form>
+                    <h3 class="centered-heading underline">Scan a QR Code</h3>
+                    
+                    <div class="form-group">
+                        <label>Scan Instructions</label>
+                        <p>Scan QR codes at recycling stations to earn points</p>
+                    </div>
+                    
+                    <div class="qr-code">
+                        <div class="qr-code">
+                        Tap to Scan QR Code
+                    </div>
+                    <button type="button" onclick="this.parentNode.parentNode.innerHTML='<h3 class=\'centered-heading\'>You got your points!</h3><p class=\'centered-heading\'>Your points have been added to your account</p>'">
+                        Scan QR Code
+                    </button>
+                    </div>
+                    
+                    <div class="form-group">
+                        <p class="centered-italic">Or enter code manually:</p>
+                        <input type="text" placeholder="Enter QR code manually" class="mb-1rem">
+                    </div>
+                    <button type="button" onclick="this.parentNode.innerHTML='<h3 class=\'centered-heading\'>You got your points!</h3><p class=\'centered-heading\'>Your points have been added to your account</p>'">Submit Code</button>
+                </form>
+            </div>
+            
+            <div class="card">
+                <form>
+                    <h3 class="centered-heading underline">Redeem Your Points</h3>
+                    
+                    <div class="form-group">
+                        <label for="pin-code">ENTER YOUR ID</label>
+                        <input type="text" id="pin-code" name="pin-code" required>
+                        <p>Enter your Green Imprint member ID</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="redeem-amount">Points to Redeem</label>
+                        <input type="number" id="redeem-amount" name="redeem-amount" min="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Reward Options</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="radio" id="reward1" name="reward" value="tree">
+                                <label for="reward1" style="display: inline;">Plant a Tree</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="radio" id="reward2" name="reward" value="coupon">
+                                <label for="reward2" style="display: inline;">Discount Coupon</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="radio" id="reward3" name="reward" value="donate">
+                                <label for="reward3" style="display: inline;">Donate Points</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" onclick="this.parentNode.innerHTML='<h3 class=\'centered-heading\'>Points Redeemed!</h3><p class=\'centered-heading\'>Your rewards have been processed</p>'">Redeem Points</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="section3" class="tab-content">
+            <h2>Feedback & Support</h2>
+            
+            <div class="card">
+                <form>
+                    <div class="form-group">
+                        <label for="feedback-name">Your Name</label>
+                        <input type="text" id="feedback-name" name="feedback-name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="feedback-email">Email Address</label>
+                        <input type="email" id="feedback-email" name="feedback-email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="feedback-type">Feedback Type</label>
+                        <select id="feedback-type" name="feedback-type">
+                            <option value="general">General Feedback</option>
+                            <option value="question">Question</option>
+                            <option value="issue">Issue</option>
+                            <option value="compliment">Compliment</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="feedback-message">Your Message</label>
+                        <textarea id="feedback-message" name="feedback-message" rows="5"></textarea>
+                    </div>
+                    
+                    <button type="button" onclick="this.parentNode.innerHTML='<h3 class=\'centered-heading\'>Thank you!</h3><p class=\'centered-heading\'>We appreciate your feedback</p>'">Submit Feedback</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer-custom">
+        <p>&copy; 2025 Green Imprint | <a href="mailto:info@greenimprint.com" class="footer-link">Contact Us</a></p>
+    </footer>
+    
+    <script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+:root {
+    --primary: #2e8b57;
+    --secondary: #3a5a40;
+    --accent: #a3b18a;
+    --light: #dad7cd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2e8b57;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+h2 {
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--accent);
+    margin: 0.5rem auto;
+}
+
+.card {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button, .btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--secondary);
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.section-divider {
+    border-top: 2px dashed var(--secondary);
+    margin: 3rem 0;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border: 1px dashed #999;
+}
+
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 3px solid var(--accent);
+}
+
+.tab-content {
+    display: none;
+}
+
+#section1:target,
+#section2:target,
+#section3:target {
+    display: block;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--primary);
+    background: white;
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.tab-button:hover {
+    background-color: var(--light);
+}
+
+#section1:target ~ .tab-buttons a[href="#section1"],
+#section2:target ~ .tab-buttons a[href="#section2"],
+#section3:target ~ .tab-buttons a[href="#section3"] {
+    background-color: var(--primary);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content:not(:first-of-type) {
+    display: none;
+}
+
+:target ~ .tab-content:first-of-type {
+    display: none;
+}
+
+.centered-padding {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.max-width-500 {
+    max-width: 500px;
+}
+
+.auto-margin {
+    margin: 0 auto;
+}
+
+.member-id-display {
+    display: none;
+    text-align: center;
+    background: #f0f0f0;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 300px;
+}
+
+.small-note {
+    font-size: 0.95em;
+}
+
+.centered-heading {
+    text-align: center;
+}
+
+.underline {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.centered-italic {
+    text-align: center;
+    font-style: italic;
+}
+
+.mb-1rem {
+    margin-bottom: 1rem;
+}
+
+.footer-custom {
+    background: #2e8b57;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-link {
+    color: white;
+}
