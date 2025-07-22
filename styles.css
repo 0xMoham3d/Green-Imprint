@@ -245,3 +245,8 @@ footer {
 .footer-link {
     color: white;
 }
+
+.logo-img {
+    max-height: 120px;
+    width: auto;
+}
